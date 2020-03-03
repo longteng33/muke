@@ -9,4 +9,7 @@
     .header .info-list li a{
         padding: 0 5px;
     }
+    .header .search{
+        display: none;
+    }
 }

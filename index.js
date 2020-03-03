@@ -1,3 +1,21 @@
+//  滚动屏幕
+$(window).scroll(function(){
+    if($(document).scrollTop()>105){
+        $(".header").addClass("headerfixed")
+    }else{
+        $(".header").removeClass("headerfixed")
+    }
+
+    if($(document).scrollTop()>600){
+        $(".elevator .return").css("display","block")
+    }else{
+        $(".elevator .return").css("display","none")
+    }
+})
+// 点击返回顶部
+$(".elevator .return").click(function(){
+    $("html,body").animate({scrollTop:0},500)
+})
  //点击添加类的函数
  function addOneClass(ele,className){
     ele.click(function(){

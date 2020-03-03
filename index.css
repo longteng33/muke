@@ -39,14 +39,23 @@ a:visited {
 
 
 .header{
-    min-width: 1200px;
+    position: relative;
+    min-width: 900px;
     height: 72px;
-    padding: 0 20px;
-    background: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.1);
+    background: #FFFFFF;
+}
+.headerfixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
 }
 .header .container{
-  
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.1);
+    padding: 0 20px;
+    z-index: 900;
 }
 .header .logo{
     float: left;
@@ -900,6 +909,9 @@ top: 0;
     padding: 16px 0;
     border-bottom: 1px solid #edf1f2;
 }
+.elevator li.return{
+    display: none;
+}
 .elevator li a{
     width: 26px;
     height: 26px;
@@ -907,11 +919,14 @@ top: 0;
     color: #b5b9bc;
     text-align: center;
 }
-.elevator li a i{
+.elevator li a i[class*='icon-']{
     display: block;
     height: 26px;
     line-height: 26px;
     font-size: 24px;
+}
+.elevator li a:hover i[class*='icon-']{
+    display: none;
 }
 .elevator li a span{
     display: none;
@@ -920,31 +935,29 @@ top: 0;
     line-height: 13px;
     color: #07111b;
 }
-.elevator li a:hover i{
-    display: none;
-}
+
 .elevator li a:hover span{
     display: block;
 }
 .elevator li .QRcode{
     position: absolute;
-    bottom: 0;
+    bottom: -13px;
     right: 50px;
     width: 172px;
     height: 212px;
     background-image: url('./img/elevator.png');
     background-repeat: no-repeat;
-    background-size: 172px;
-    /* transform: scale(0.01);
-    transform-origin: 100% 95%; */
-    transition: opacity 0.25s, transform .3s;
+    background-size: cover;
+    transform-origin: right bottom;
     opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.25s, transform .3s;
 }
 .elevator li:hover .QRcode{
     opacity: 1;
-    /* transform: scale(1); */
+    transform: scale(1);
 }
-.elevator li .icon-weixin~.QRcode{
+.elevator li .icon-app~.QRcode{
     background-position: 0 -220px;
 }
 .elevator li .icon-weixin~.QRcode{
