@@ -1,0 +1,9 @@
+/* 屏幕宽度小于1480px时的样式 */
+@media (max-width:1480px){
+    .header .nav-item a{
+        padding: 0 10px;
+    }
+    .header .search-area{
+        width: 300px;
+    }
+}

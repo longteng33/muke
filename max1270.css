@@ -1,0 +1,12 @@
+/* 屏幕宽度小于1270px时的样式 */
+@media (max-width:1270px){
+    .header{
+        padding: 0;
+    }
+    .header .nav-item a{
+        padding: 0 5px;
+    }
+    .header .info-list li a{
+        padding: 0 5px;
+    }
+}
