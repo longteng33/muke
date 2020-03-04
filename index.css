@@ -261,7 +261,7 @@ a:visited {
 
 }
 .carousel .banner-item{
-
+    position: absolute;
 }
 .carousel .banner-item a{
     display: block;
